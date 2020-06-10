@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-05</title>
+    <title>Studio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -55,8 +55,30 @@
           <h1 class="hero-title">
             эффективные решения для вашего бизнеса
           </h1>
-          <a href="" class="order-btn">Заказать услугу</a>
+          <button class="order-btn" data-modal-open>Заказать услугу</button>
         </section>
+      </div>
+
+      <!-- МОДАЛЬНОЕ ОКНО -->
+      <div class="modal">
+        <form class="modal-form">
+          <b class="modal-header">Оставьте свои данные, мы вам перезвоним</b>
+          <input class="modal-input" placeholder="Имя" type="text" />
+          <input class="modal-input" placeholder="Телефон" type="number" />
+          <input class="modal-input" placeholder="Почта" type="email" />
+          <textarea
+            rows="5"
+            class="modal-textarea"
+            placeholder="Коментарий"
+            name="comment"
+          ></textarea>
+          <input type="checkbox" name="agreement" id="agreement" />
+          <label for="agreement" class="agreement">
+            Соглашаюсь с рассылкой и принимаю
+            <a href="" class="conditions">Условия договора</a>
+          </label>
+          <button class="order-btn modal-btn">Отправить</button>
+        </form>
       </div>
 
       <!-- СЕКЦИЯ НАВЫКИ -->
@@ -528,9 +550,44 @@
               </li>
             </ul>
           </li>
+          <li class="subscribe">
+            <p class="invite">Подпишитесь на рассылку</p>
+            <form class="subscribe-form">
+              <input
+                class="subscribe-input"
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="E-mail"
+              />
+              <button class="subscribe-btn" type="submit">
+                Подписаться
+                <svg class="subscribe-img" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </li>
         </ul>
         <p class="copyright">2020 | Developed by GoIT Students</p>
       </div>
     </footer>
+    <!-- СКРИПТ ДЛЯ МОДАЛЬНОГО ОКНА -->
+    <script src="./js/modal.js">
+      (() => {
+              const refs = {
+                openModalBtn: document.querySelector('[data-modal-open]'),
+                closeModalBtn: document.querySelector('[data-modal-close]'),
+                modal: document.querySelector('[data-modal]'),
+              };
+
+              refs.openModalBtn.addEventListener('click', toggleModal);
+              refs.closeModalBtn.addEventListener('click', toggleModal);
+
+              function toggleModal() {
+                refs.modal.classList.toggle('is-hidden');
+              }
+            })();
+    </script>
   </body>
 </html>
