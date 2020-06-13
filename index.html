@@ -577,16 +577,16 @@
           </svg>
           <span class="label-name">Почта</span>
         </label>
-        <textarea
-          class="modal-input modal-textarea"
-          placeholder=" "
-          name="comment"
-        >
-        </textarea>
+        <textarea class="modal-textarea" name="comment"></textarea>
         <label class="modal-agreement">
           <input type="checkbox" name="agreement" class="agreement-chek" />
-          Соглашаюсь с рассылкой и принимаю&nbsp;
-          <a href="" class="conditions">Условия договора</a>
+          <svg class="check-icon" width="12" height="12">
+            <use href="./images/sprite.svg#icon-check"></use>
+          </svg>
+          <span
+            >Соглашаюсь с рассылкой и принимаю
+            <a href="" class="conditions">Условия договора</a>
+          </span>
         </label>
         <button class="order-btn modal-btn">Отправить</button>
       </form>
