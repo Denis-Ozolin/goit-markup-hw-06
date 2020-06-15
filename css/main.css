@@ -457,7 +457,6 @@
   color: var(--accent-color);
 }
 
-/* можно закоментировать єтот кусок и анимация сработает */
 .modal-textarea:not(:placeholder-shown) ~ .textarea-name {
   transform: translateY(-32px);
 }
