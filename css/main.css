@@ -457,9 +457,10 @@
   color: var(--accent-color);
 }
 
-/* .modal-textarea:not(:placeholder-shown) ~ .textarea-name {
+/* можно закоментировать єтот кусок и анимация сработает */
+.modal-textarea:not(:placeholder-shown) ~ .textarea-name {
   transform: translateY(-32px);
-} */
+}
 
 .modal-agreement {
   display: flex;
