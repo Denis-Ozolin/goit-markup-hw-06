@@ -45,7 +45,6 @@
   overflow: hidden;
 
   background: var(--bgc-accent-white);
-  border: 1px solid #eeeeee;
   border-radius: 5px;
   cursor: pointer;
   transition: box-shadow 250ms var(--timing-function);

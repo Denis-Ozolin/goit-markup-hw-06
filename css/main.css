@@ -344,7 +344,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--bgc-accent-white);
+  cursor: pointer;
+  /* transition: transform 5s var(--timing-function),
+    background-color 5s var(--timing-function); */
 }
+
+/* .modal-close-btn:hover,
+.modal-close-btn:focus {
+  transform: translate(-504px);
+  background-color: var(--accent-color);
+} */
 
 .modal-heading {
   margin-bottom: 30px;
@@ -399,14 +408,6 @@
 .modal-label:focus-within > .modal-input {
   border: 1px solid var(--accent-color);
 }
-
-/* вариант с вкл цветом подсказки */
-
-/* .modal-label:focus-within > .label-name,
-.modal-input:not(:placeholder-shown) ~ .label-name {
-  transform: translate(-22px, -40px);
-  color: var(--accent-color);
-} */
 
 .modal-label:focus-within > .label-name {
   transform: translate(-22px, -40px);
